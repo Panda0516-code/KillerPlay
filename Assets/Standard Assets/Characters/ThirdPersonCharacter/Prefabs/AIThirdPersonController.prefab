@@ -200,6 +200,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -211,6 +213,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -476,6 +479,7 @@ GameObject:
   - component: {fileID: 19597056}
   - component: {fileID: 11402594}
   - component: {fileID: 11450346}
+  - component: {fileID: 3611245253402636164}
   m_Layer: 0
   m_Name: AIThirdPersonController
   m_TagString: Untagged
@@ -604,6 +608,26 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.2
+--- !u!114 &3611245253402636164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1308000454, guid: f2c2112f638c5b8489d16403d930373b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strixBehaviours:
+  - {fileID: 11450346}
+  objectType: 1
+  sendRate: 5
+  syncDestroy: 1
+  networkInstanceId: -1
+  InstantiableBy: 1
+  ConnectionClosedBehaviour: 1
 --- !u!1 &113866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,6 +2224,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2211,6 +2237,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

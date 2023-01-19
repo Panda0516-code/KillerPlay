@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using SoftGear.Strix.Unity.Runtime;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]
-    public class ThirdPersonUserControl : MonoBehaviour
+    public class ThirdPersonUserControl : StrixBehaviour
     {
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
@@ -45,6 +46,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+            
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
