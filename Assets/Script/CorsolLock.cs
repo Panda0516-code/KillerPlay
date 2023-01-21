@@ -8,6 +8,7 @@ public class CorsolLock : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()
@@ -16,6 +17,13 @@ public class CorsolLock : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            if (Input.GetButton("Fire1"))
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+
+            }
         }
+        
     }
 }
