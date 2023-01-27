@@ -12,7 +12,7 @@ public class Attack : StrixBehaviour
     public int Maxhp = 100;
     public int Damage = 10;
     public float rayDistance = 3f;
-    public float force = 10;
+    public float force =100;
     RaycastHit hit;
     Animator m_Animator;
     private int otherHp;
@@ -30,7 +30,7 @@ public class Attack : StrixBehaviour
         {
             return;
         }
-        Vector3 rayPosition = transform.position + new Vector3(0,1,0);
+        Vector3 rayPosition = transform.position + new Vector3(0,0.5f,0);
         Ray ray = new Ray(rayPosition, transform.forward);
         Debug.DrawRay(rayPosition, ray.direction * rayDistance, Color.red);
 
