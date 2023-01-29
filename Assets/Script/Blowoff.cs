@@ -7,9 +7,7 @@ public class Blowoff : StrixBehaviour
 {
     [SerializeField]
     float impulse = 300;
-
     bool isCollision = false;
-
     Rigidbody rigidBody;
     Rigidbody bulletRigidBody;
     GameObject bullet;
@@ -32,7 +30,6 @@ public class Blowoff : StrixBehaviour
             rigidBody.AddForce(playerVelocity * impulse, ForceMode.Impulse);
             rigidBody.AddForce(Vector3.up * impulse, ForceMode.Impulse);
 
-            
         }
     }
 }

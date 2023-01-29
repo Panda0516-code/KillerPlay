@@ -1289,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -247
       objectReference: {fileID: 0}
+    - target: {fileID: 2065367286, guid: 4743cdac02f4447409af6b84bc8ffcfe, type: 3}
+      propertyPath: objectType
+      value: 1048577
+      objectReference: {fileID: 0}
     - target: {fileID: 1216987314598044, guid: 4743cdac02f4447409af6b84bc8ffcfe, type: 3}
       propertyPath: m_Name
       value: StrixConnectUI

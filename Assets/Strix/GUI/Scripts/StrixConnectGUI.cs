@@ -14,7 +14,10 @@ public class StrixConnectGUI : MonoBehaviour {
     public Text statusText;
     public Button connectButton;
     public UnityEvent OnConnect;
-
+    public GameObject UI;
+    private void Start()
+    {
+    }
     void OnEnable()
     {
         statusText.text = "";
@@ -38,7 +41,7 @@ public class StrixConnectGUI : MonoBehaviour {
         statusText.text = "Connection established";
 
         OnConnect.Invoke();
-
+        UI.SetActive(true);
         gameObject.SetActive(false);
     }
 
