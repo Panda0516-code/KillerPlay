@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class FireBullet : StrixBehaviour {
     public GameObject bullet;
+    public GameObject ring;
+    public ParticleSystem particle;
     [Header("溜め増やす値")]
     [SerializeField]
     private float chargepoint;
@@ -16,13 +18,12 @@ public class FireBullet : StrixBehaviour {
     private float maxpower;
     private bool chargereadey;
     Animator m_Animator;
-    private bool notfire1button =false;
-    private bool notfire2button = false;
-
+    
 
     private void Start()
     {
         m_Animator = GetComponent<Animator>();
+        ring.SetActive(false);
 
     }
     void Update () {
@@ -31,7 +32,8 @@ public class FireBullet : StrixBehaviour {
         }
         if (Input.GetButton("Fire2") && chargepower < maxpower)
         {
-
+            ring.SetActive(true);
+            particle.Play();
             m_Animator.SetTrigger("Oncharge");
             chargepower += chargepoint;
             if (chargepower >= maxpower / 4)
@@ -43,9 +45,13 @@ public class FireBullet : StrixBehaviour {
                 chargereadey = false;
             }
         }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            ring.SetActive(false);
+            particle.Pause();
+        }
 
-        
-	    if (Input.GetButtonDown("Fire1") && chargereadey) {
+            if (Input.GetButtonDown("Fire1") && chargereadey) {
 	        GameObject instance = Instantiate(bullet);
 	        Transform firePos = transform.Find("FirePos");
 

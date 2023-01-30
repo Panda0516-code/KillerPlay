@@ -42,8 +42,8 @@ public class BulletControl : MonoBehaviour {
 	            GameObject effect = Instantiate(hitEffect);
 	            effect.transform.position = hitInfo.point;
 
-	            Destroy(effect, 2);
-                Destroy(gameObject);
+	            Destroy(effect, 1);
+                Destroy(gameObject,1);
             
 
 	        return;
